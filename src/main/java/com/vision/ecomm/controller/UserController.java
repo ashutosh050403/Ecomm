@@ -1,9 +1,10 @@
 package com.vision.ecomm.controller;
 
-
+import com.vision.ecomm.dto.AuthenticationRequest;
+import com.vision.ecomm.dto.AuthenticationResponse;
 import com.vision.ecomm.model.User;
+import com.vision.ecomm.service.AuthenticationService;
 import com.vision.ecomm.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,21 +14,26 @@ import java.util.List;
 @CrossOrigin("*")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+    private final AuthenticationService authenticationService;
+
+    public UserController(UserService userService, AuthenticationService authenticationService) {
+        this.userService = userService;
+        this.authenticationService = authenticationService;
+    }
 
     @PostMapping("/register")
-    public User registerUser(@RequestBody User user) {
-        return userService.registerUser(user);
+    public AuthenticationResponse registerUser(@RequestBody User user) {
+        return authenticationService.register(user);
     }
 
     @PostMapping("/login")
-    private User loginUser(@RequestBody User user) {
-        return userService.loginUser(user.getEmail(),user.getPassword());
+    public AuthenticationResponse loginUser(@RequestBody AuthenticationRequest request) {
+        return authenticationService.authenticate(request);
     }
 
     @GetMapping
-    private List<User> getAllUsers() {
+    public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 }
