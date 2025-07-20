@@ -72,6 +72,24 @@ This is a complete e-commerce application built with Spring Boot. It provides fu
 ('Nikon Camera', 'Professional DSLR camera with high-quality lens', 129999, 'https://cdn.pixabay.com/photo/2023/11/14/15/46/nikon-8388022_640.jpg', 'Gadgets'),
 ('Wireless Earphones', 'Compact and stylish wireless earphones', 3499, 'https://cdn.pixabay.com/photo/2020/09/24/14/51/earphones-5598952_640.jpg', 'Gadgets');
 
+     **User Table Values**:
+     INSERT INTO user (name, email, password, role) 
+     VALUES (
+     'Admin User', 
+     'admin@shopify.com', 
+     '$2y$10$6m58toBn5TwCQFWmrxIjEuNzYcodvmF6bqvMAXoouhjutYpp6JVNK', 
+     'ROLE_ADMIN'
+     );
+     Password for admin:- admin123
+     INSERT INTO user (name, email, password, role) 
+     VALUES (
+     'Customer User', 
+     'customer@shopify.com', 
+     '$2a$10$E.qA.f3fB0gQ3b4a/R5eTeuF.zJG.9dUnTq9kStx8/E3jH9d.PzCy', 
+     'ROLE_CUSTOMER'
+     );  
+     Password for customer:-customer123
+      
 3.  **Run the application**:
 
     ```bash
