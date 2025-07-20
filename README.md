@@ -54,6 +54,23 @@ This is a complete e-commerce application built with Spring Boot. It provides fu
         spring.datasource.username=<your-mysql-username>
         spring.datasource.password=<your-mysql-password>
         ```
+       **Product Table Values**:
+
+  INSERT INTO product (name, description, price, image_url, category) VALUES
+-- 📌 Electronics
+('Laptop', 'High-performance laptop for gaming and work', 75000, 'https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg', 'Electronics'),
+('Apple MacBook', 'Lightweight and powerful MacBook with Retina Display', 95000, 'https://cdn.pixabay.com/photo/2016/11/29/05/08/apple-1867461_1280.jpg', 'Electronics'),
+('Headphones', 'Wireless noise-cancelling headphones', 5000, 'https://cdn.pixabay.com/photo/2018/10/04/05/38/headphone-3722950_1280.jpg', 'Electronics'),
+
+-- 📌 Clothing
+('Men Shirts', 'Cotton casual shirts for men', 1999, 'https://cdn.pixabay.com/photo/2014/08/26/21/49/shirts-428618_640.jpg', 'Clothing'),
+('Women Fashion', 'Trendy women outfits for all seasons', 2499, 'https://cdn.pixabay.com/photo/2017/01/14/10/03/fashion-1979136_640.jpg', 'Clothing'),
+('Baby Shoes', 'Soft and comfortable baby shoes', 999, 'https://cdn.pixabay.com/photo/2017/09/13/18/06/babys-bootees-2746390_640.jpg', 'Clothing'),
+
+-- 📌 Gadgets
+('Studio Headset', 'High-quality audio headset for music production', 11999, 'https://cdn.pixabay.com/photo/2022/06/21/21/15/audio-7276511_640.jpg', 'Gadgets'),
+('Nikon Camera', 'Professional DSLR camera with high-quality lens', 129999, 'https://cdn.pixabay.com/photo/2023/11/14/15/46/nikon-8388022_640.jpg', 'Gadgets'),
+('Wireless Earphones', 'Compact and stylish wireless earphones', 3499, 'https://cdn.pixabay.com/photo/2020/09/24/14/51/earphones-5598952_640.jpg', 'Gadgets');
 
 3.  **Run the application**:
 
